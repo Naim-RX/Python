@@ -64,3 +64,34 @@ print(name.isspace())
 
 # Swap uppercase to lowercase and lowercase to uppercase
 print(name.swapcase())
+
+#f-string
+
+name = "Naim"
+country = "Bangladesh"
+
+# Create an f-string by inserting variables inside the string
+letter = f"Hey my name is {name} and i am from {country}"
+
+# Print the formatted string
+print(letter)
+
+
+price = 49.0999
+# Print the price rounded to 2 decimal places using f-string formatting
+print(f"Price is {price:.2f}")
+
+
+#doc string
+# Define a function named square that takes one parameter n
+def square(n):
+    # Docstring: describes what the function does
+    '''Takes a number , returns the square of n'''
+    # Return the square of n
+    return n**2
+
+# Print the docstring of the function
+print(square.__doc__)
+
+# Call the function with value 5 and print the result
+print(square(5))
