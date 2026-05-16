@@ -18,3 +18,8 @@ else:
     
     # Print this message if the user is under 18
     print("You can't drive")
+
+# short hand if else
+x = 10
+y = 5
+print ("x") if(x > y) else print("y")
