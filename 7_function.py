@@ -51,3 +51,19 @@ def name(**name):
 
 # Call the function using keyword arguments
 name(lname="Naim", mname="Asraful", fname="Golam")
+
+marks = [19,34,23,43,23]
+
+# Loop through the list "marks" using enumerate()
+# enumerate() gives both the index and the value
+for index, mark in enumerate(marks):
+
+    # Print the current mark value
+    print(mark)
+
+    # Check if the current index is 2
+    # (which is the 3rd position because indexing starts from 0)
+    if(index == 2):
+
+        # Print a message when index 2 is reached
+        print("Index 3")
