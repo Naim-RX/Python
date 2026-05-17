@@ -51,3 +51,54 @@ with open('myFile.txt', 'r') as f:
     
     # Read and print the updated contents of the file
     print(f.read())
+
+
+# Open the file in read mode
+f = open('myFile.txt', 'r')
+
+# Infinite loop to read the file line by line
+while True:
+    
+    # Read one line from the file
+    line = f.readline()
+    
+    # Print the current line
+    print(line)
+    
+    # If the line is empty, it means end of file is reached
+    if not line:
+        
+        # Print the empty line and its data type
+        print(line, type(line))
+        
+        # Exit the loop
+        break
+
+
+# Initialize counter variable
+i = 0
+
+# Another infinite loop
+while True:
+    
+    # Increase counter by 1
+    i = i + 1
+    
+    # Check if line is empty
+    if not line:
+        break
+    
+    # ERROR:
+    # line is a string, and strings do not have readline() method
+    # This line will cause an error
+    line = line.readline()
+    
+    # Split the line using comma (,)
+    # Take first value
+    x1 = line.split(',')[0]
+    
+    # Take second value
+    x2 = line.split(',')[1]
+    
+    # Print formatted output
+    print(f'Marks are {x1} {x2}')
