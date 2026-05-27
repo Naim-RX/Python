@@ -102,3 +102,46 @@ while True:
     
     # Print formatted output
     print(f'Marks are {x1} {x2}')
+
+
+
+f = open("sample.txt", "r")
+
+print(f.read(5))   # Reads first 5 characters
+
+f.seek(0)          # Move pointer back to beginning
+
+print(f.read(5))
+
+f.close()
+
+
+
+f = open("sample.txt", "r")
+
+print(f.tell())    # Initial position
+
+f.read(5)
+
+print(f.tell())    # Position after reading 5 chars
+
+f.close()
+
+
+
+# Open the file in read and write mode
+# "r+" allows both reading and writing without deleting existing content
+f = open("sample.txt", "r+")
+
+# Reduce the file size to 5 characters/bytes
+# Everything after the first 5 characters will be removed
+f.truncate(5)
+
+# Move the file pointer back to the beginning of the file
+f.seek(0)
+
+# Read and print the updated file content
+print(f.read())
+
+# Close the file to free system resources
+f.close()
