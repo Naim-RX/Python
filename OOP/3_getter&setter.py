@@ -2,25 +2,25 @@
 class Myclass:
     def __init__(self, value):
         # _value is a protected attribute (by convention)
-        self._value = value
+        self.value = value
 
     # Method to display the current value
     def show(self):
-        print(f"Value is {self._value}")
+        print(f"Value is {self.value}")
 
     # Getter method using the @property decorator
     # Allows ten_value to be accessed like an attribute
     @property
     def ten_value(self):
         # Return 10 times the stored value
-        return 10 * self._value
+        return 10 * self.value
 
     # Setter method for the ten_value property
     # Allows assignment to ten_value like an attribute
     @ten_value.setter
     def ten_value(self, new_value):
         # Store one-tenth of the assigned value in _value
-        self._value = new_value / 10
+        self.value = new_value / 10
 
 
 
